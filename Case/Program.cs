@@ -27,8 +27,22 @@ void PrintArray(string[] array)
     Console.WriteLine();
 }
 
+string[] SortArray(string[] array, int size)
+{
+    string[] arr = new string[size];
+    for (int i = 0; i < size; i++)
+    {       
+        if (array[i].Length < 4) arr[i] = array[i];
+    }
+    return arr;
+}
+
+
 Console.WriteLine("Введите количество элементов массива");
 int number = int.Parse(Console.ReadLine());
 
 string[] massive = FillArray(number);
 PrintArray(massive);
+Console.WriteLine();
+string[] mass = SortArray(massive, number);
+PrintArray(mass);
