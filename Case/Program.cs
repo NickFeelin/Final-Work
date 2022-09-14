@@ -4,3 +4,14 @@
 выполнения алгоритма. При решении не рекомендуется пользоваться коллекциями, лучше обойтись 
 исключительно массивами.
 */
+
+string[] GetArray(int size)
+{
+    string[] array = new string[size];
+    for (int i = 0; i < size; i++)
+    {
+        Console.WriteLine("Ввидите значение элемента массива");
+        array[i] = Console.ReadLine();
+    }
+    return array;
+}
